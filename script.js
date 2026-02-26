@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', (e) => {
         const x = e.clientX;
         const y = e.clientY;
-        
+
         // Smooth positioning with transition
         glow.animate({
             left: `${x}px`,
@@ -76,40 +76,72 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
+
             const rotateX = (y - centerY) / 20;
             const rotateY = (centerX - x) / 20;
-            
+
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
         });
     });
 
-    // 5. Dynamic Year for Copyright
-    const yearSpan = document.querySelector('.copyright');
-    if (yearSpan) {
-        yearSpan.innerHTML = `&copy; ${new Date().getFullYear()} Innovation Architect. Optimized for precision.`;
+    // 5. Progress Bar Animation
+    const progressFills = document.querySelectorAll('.progress-fill');
+    if (progressFills.length > 0) {
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = entry.target;
+                    const progress = fill.getAttribute('data-progress');
+                    fill.style.width = `${progress}%`;
+                    progressObserver.unobserve(fill);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        progressFills.forEach(fill => {
+            fill.style.width = '0%'; // Reset for animation
+            progressObserver.observe(fill);
+        });
     }
 
-    // 6. Smooth Scroll for Nav Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').slice(1);
-            const target = document.getElementById(targetId);
-            
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
+    // 6. Text Scramble for Section Titles
+    const scrambleElements = document.querySelectorAll('.section-title');
+    scrambleElements.forEach(el => {
+        const originalText = el.innerText;
+        el.addEventListener('mouseenter', () => {
+            let iterations = 0;
+            const interval = setInterval(() => {
+                el.innerText = el.innerText.split("")
+                    .map((char, index) => {
+                        if (index < iterations) return originalText[index];
+                        return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    }).join("");
+
+                if (iterations >= originalText.length) clearInterval(interval);
+                iterations += 1 / 3;
+            }, 30);
         });
     });
+
+    // 7. Dynamic Info for Footer
+    const yearSpan = document.querySelector('.copyright');
+    if (yearSpan) {
+        yearSpan.innerHTML = `&copy; ${new Date().getFullYear()} Digital Explorer. Mapping the Future.`;
+    }
+
+    const systemTime = document.querySelector('.system-time');
+    if (systemTime) {
+        setInterval(() => {
+            const now = new Date();
+            systemTime.innerText = now.toISOString().split('T')[1].split('.')[0] + ' UTC';
+        }, 1000);
+    }
 });
+

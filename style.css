@@ -1,13 +1,16 @@
 :root {
-    --bg-color: #050507;
-    --card-bg: rgba(20, 20, 25, 0.7);
-    --accent: #ff3344;
-    --accent-glow: rgba(255, 51, 68, 0.4);
-    --text-primary: #f0f0f5;
-    --text-secondary: #94a3b8;
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --bg-color: #040807;
+    --bg-surface: #0a1110;
+    --card-bg: rgba(15, 25, 23, 0.7);
+    --accent: #00ffc2;
+    --accent-secondary: #00d4ff;
+    --accent-glow: rgba(0, 255, 194, 0.3);
+    --text-primary: #f0fdfa;
+    --text-secondary: #94a3a1;
+    --glass-border: rgba(0, 255, 194, 0.1);
     --nav-height: 80px;
-    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --nature-gradient: linear-gradient(135deg, #0A1F1C 0%, #040807 100%);
 }
 
 * {
@@ -57,7 +60,7 @@ body {
 }
 
 .text-gradient {
-    background: linear-gradient(90deg, #ff3344, #ff8800);
+    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -154,9 +157,23 @@ code,
     width: 100%;
     height: 100%;
     background-image:
-        radial-gradient(circle at 2px 2px, rgba(255, 51, 68, 0.05) 1px, transparent 0);
+        radial-gradient(circle at 2px 2px, var(--accent-glow) 1px, transparent 0);
     background-size: 40px 40px;
     z-index: -1;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('nature_tech_hero_bg_1772111763787.png') center/cover no-repeat;
+    opacity: 0.35;
+    z-index: -1;
+    filter: saturate(0.5) brightness(0.8);
 }
 
 .circuit-decoration {
@@ -212,7 +229,7 @@ code,
 .badge {
     display: inline-block;
     padding: 6px 16px;
-    background: rgba(255, 51, 68, 0.1);
+    background: rgba(0, 255, 194, 0.05);
     color: var(--accent);
     border: 1px solid var(--accent);
     border-radius: 100px;
@@ -221,6 +238,7 @@ code,
     margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    backdrop-filter: blur(5px);
 }
 
 h1 {
@@ -457,13 +475,135 @@ h1 {
     gap: 12px;
 }
 
-.tech-stack span {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    border-radius: 4px;
+/* Expedition Section */
+.expedition-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
+
+.expedition-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+
+.expedition-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.expedition-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: var(--transition);
+}
+
+.expedition-card:hover .expedition-visual img {
+    filter: brightness(1) scale(1.02);
+}
+
+.expedition-info {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.expedition-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.expedition-features {
+    list-style: none;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.expedition-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.expedition-features li::before {
+    content: '→';
+    color: var(--accent);
+}
+
+.progress-bar-container {
+    margin-top: 40px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+    box-shadow: 0 0 15px var(--accent-glow);
+    border-radius: 10px;
+}
+
+/* Interests Section */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.interest-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.interest-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.interest-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.interest-card h3 svg {
+    color: var(--accent);
+}
+
 
 /* Skills */
 .skills-wrapper {
@@ -597,6 +737,42 @@ h1 {
     margin-top: 40px;
 }
 
+.btn-primary {
+    background: var(--accent);
+    color: #040807;
+    /* Dark text for contrast against bright cyan */
+    box-shadow: 0 10px 30px -10px var(--accent-glow);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tech-stack span {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    background: rgba(0, 255, 194, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+
+    .expedition-card,
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expedition-info {
+        padding: 40px;
+    }
+}
+
+
 .status-indicator {
     display: flex;
     align-items: center;
@@ -631,17 +807,18 @@ h1 {
 
 @keyframes shadowPulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(255, 51, 68, 0.4);
+        box-shadow: 0 0 0 0 var(--accent-glow);
     }
 
     70% {
-        box-shadow: 0 0 0 15px rgba(255, 51, 68, 0);
+        box-shadow: 0 0 0 15px rgba(0, 255, 194, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(255, 51, 68, 0);
+        box-shadow: 0 0 0 0 rgba(0, 255, 194, 0);
     }
 }
+
 
 .link-group {
     margin-bottom: 40px;
