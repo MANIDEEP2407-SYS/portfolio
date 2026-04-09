@@ -4,359 +4,613 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Explorer | Innovation & Location Systems</title>
+    <title>Akula Manideep | Computer Science Student & Systems Builder</title>
     <meta name="description"
-        content="Portfolio of a developer and nature explorer specializing in geocoded systems, architecture, and innovative problem-solving.">
+        content="Portfolio of Akula Manideep — Computer Science student who builds software: games, tools, websites, and biomedical devices.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="dark-theme">
+<body>
+    <!-- Cursor Glow -->
     <div id="cursor-glow"></div>
 
-    <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="logo">AM<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">Compass</a></li>
-            <li><a href="#expedition">Expedition</a></li>
-            <li><a href="#projects">Works</a></li>
-            <li><a href="#inspiration">Beyond</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#beyond">Beyond</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" aria-label="Toggle Theme">
+            <span class="sun-icon"><i class="fa-solid fa-sun"></i></span>
+            <span class="moon-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
     </nav>
 
     <main>
-        <!-- Hero Section -->
+        <!-- ══════════════════ HERO ══════════════════ -->
         <section id="home" class="hero">
-            <div class="circuit-grid"></div>
-            <div class="hero-content">
-                <div class="badge">Nature Explorer & Innovation Strategist</div>
-                <h1>Exploring <span class="text-gradient">Unknowns</span><br>Defining Systems</h1>
-                <p class="hero-sub">Passionate Builder | Anime Enthusiast | Bibliophile | Working on the future of
-                    location intelligence.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Current Expeditions</a>
-                    <a href="#about" class="btn btn-secondary">My Story</a>
+            <div class="hero-grid">
+                <!-- Left Column -->
+                <div class="hero-content">
+                    <div class="hero-greeting">Hello, This is</div>
+                    <h1 class="hero-name">Akula <span class="text-gradient">Manideep</span></h1>
+                    <div class="hero-typewriter">
+                        I'm a <span id="typewriter-text"></span><span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-sub">Based in Coimbatore, Tamil Nadu. I turn ideas into reality — from biomedical devices to web systems and AI-powered tools.</p>
+                    <div class="hero-social">
+                        <a href="https://github.com/MANIDEEP2407-SYS" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/manideep-reddy-akula-148b453b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:manideepreddyakula@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="resume.pdf" class="btn btn-secondary" target="_blank">Get Resume</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Code Card -->
+                <div class="hero-code-card">
+                    <div class="code-card-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-filename">coder.js</span>
+                    </div>
+                    <div class="code-card-body">
+                        <pre><code><span class="c-keyword">const</span> <span class="c-var">coder</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'Akula Manideep'</span><span class="c-punct">,</span>
+  <span class="c-prop">skills</span><span class="c-punct">:</span> <span class="c-punct">[</span>
+    <span class="c-string">'Java'</span><span class="c-punct">,</span> <span class="c-string">'Python'</span><span class="c-punct">,</span>
+    <span class="c-string">'C / C++'</span><span class="c-punct">,</span> <span class="c-string">'JavaScript'</span><span class="c-punct">,</span>
+    <span class="c-string">'Next.js'</span><span class="c-punct">,</span> <span class="c-string">'PostgreSQL'</span><span class="c-punct">,</span>
+    <span class="c-string">'DSA'</span><span class="c-punct">,</span> <span class="c-string">'Git'</span>
+  <span class="c-punct">],</span>
+  <span class="c-prop">hardWorker</span><span class="c-punct">:</span> <span class="c-keyword">true</span><span class="c-punct">,</span>
+  <span class="c-prop">quickLearner</span><span class="c-punct">:</span> <span class="c-keyword">true</span><span class="c-punct">,</span>
+  <span class="c-prop">problemSolver</span><span class="c-punct">:</span> <span class="c-keyword">true</span><span class="c-punct">,</span>
+  <span class="c-prop">hireable</span><span class="c-punct">:</span> <span class="c-keyword">function</span><span class="c-punct">() {</span>
+    <span class="c-keyword">return</span> <span class="c-punct">(</span>
+      <span class="c-keyword">this</span><span class="c-punct">.</span><span class="c-prop">hardWorker</span>
+      <span class="c-op">&&</span> <span class="c-keyword">this</span><span class="c-punct">.</span><span class="c-prop">problemSolver</span>
+      <span class="c-op">&&</span> <span class="c-keyword">this</span><span class="c-punct">.</span><span class="c-prop">skills</span><span class="c-punct">.</span><span class="c-method">length</span> <span class="c-op">>=</span> <span class="c-num">5</span>
+    <span class="c-punct">);</span>
+  <span class="c-punct">}</span>
+<span class="c-punct">};</span></code></pre>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- ══════════════════ ABOUT ══════════════════ -->
         <section id="about" class="about section-padding">
             <div class="container">
-                <div class="section-decor">01<span>.</span></div>
-                <h2 class="section-title">The <span class="accent-text">Compass</span></h2>
+                <div class="section-header">
+                    <h2 class="section-title">Who <span class="text-gradient">I Am?</span></h2>
+                </div>
                 <div class="about-grid">
-                    <div class="about-text">
-                        <p class="highlight">I find my peace in nature and my purpose in building systems that solve
-                            real-world complexities.</p>
-                        <p>Based in <strong>Coimbatore</strong>, I am a developer who believes every project is a
-                            journey into the unknown. When I'm not architecting code, you'll find me lost in the worlds
-                            of <strong>Anime</strong> or deep within the pages of a <strong>compelling book</strong>.
-                            These stories fuel my creativity and drive my passion for making impactful projects.</p>
-                        <p>As an <strong>Innovation Ambassador</strong> and <strong>NSS Volunteer</strong>, I'm
-                            dedicated to leveraging technology for social good, blending engineering precision with a
-                            storyteller's heart.</p>
-                        <div class="stats">
-                            <div class="stat-item">
-                                <span class="stat-num">Nature</span>
-                                <span class="stat-label">Inspiration</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-num">Explorer</span>
-                                <span class="stat-label">Role</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-num">Visionary</span>
-                                <span class="stat-label">Drive</span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="about-visual">
-                        <div class="profile-card">
-                            <div class="card-inner">
-                                <div class="node-point p1"></div>
-                                <div class="node-point p2"></div>
-                                <div class="node-point p3"></div>
-                                <div class="profile-img-container">
-                                    <img src="profile.jpeg" alt="Manideep Reddy" class="profile-image">
-                                </div>
-                                <div class="card-content">
-                                    <h3>Digital Identity</h3>
-                                    <p class="code">mode: "Active_Exploration"</p>
-                                    <p class="code">fuel: ["Anime", "Books", "Code"]</p>
-                                </div>
-                            </div>
+                        <div class="profile-frame">
+                            <div class="profile-glow"></div>
+                            <img src="profile.jpeg" alt="Akula Manideep" class="profile-image">
                         </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="about-bio highlight">My name is <strong>Akula Manideep</strong>. I am a Computer Science student at Coimbatore, passionate about building robust software systems and real-world hardware solutions.</p>
+                        <p class="about-bio">I am a quick learner with a self-learning attitude. I love exploring new technologies and am passionate about problem-solving — from backend systems and DSA to biomedical devices and IoT projects.</p>
+                        <p class="about-bio">I have collaborated on projects spanning <strong>fintech, spatial systems, AI game engines, healthcare technology</strong>, and <strong>environmental sensing</strong> — always focused on impact.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Current Expedition: Innovation & Impact -->
-        <section id="expedition" class="section-padding expedition-section">
+        <!-- ══════════════════ SKILLS ══════════════════ -->
+        <section id="skills" class="skills section-padding">
             <div class="container">
-                <h2 class="section-title">02. Current <span class="accent-text">Expedition</span></h2>
-                <div class="expedition-grid">
-                    <!-- Geocoded Systems -->
-                    <div class="expedition-card">
-                        <div class="expedition-visual">
-                            <img src="geocoded_system_visual_1772111812327.png" alt="Geocoded Systems">
-                        </div>
-                        <div class="expedition-info">
-                            <h3>Geocoded Addressing Systems</h3>
-                            <p>Architecting a next-generation spatial framework to redefine location intelligence beyond
-                                basic coordinates.</p>
-                            <ul class="expedition-features">
-                                <li>Spatial Data Optimization</li>
-                                <li>High-Precision Mapping</li>
-                            </ul>
-                            <div class="progress-bar-container">
-                                <div class="progress-label"><span>Status: Literacy Survey</span><span>10%</span></div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 10%" data-progress="10"></div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="section-header">
+                    <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <!-- Row 1: Left to Right — Core Languages & Tools -->
+                <div class="marquee-track track-left">
+                    <div class="marquee-row">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Electron JS</span>
+                        <span class="skill-tag">LaTeX / Overleaf</span>
+                        <!-- Duplicate for seamless loop -->
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Electron JS</span>
+                        <span class="skill-tag">LaTeX / Overleaf</span>
+                    </div>
+                </div>
+                <!-- Row 2: Right to Left — Systems & Concepts -->
+                <div class="marquee-track track-right">
+                    <div class="marquee-row">
+                        <span class="skill-tag accent">CPU Architecture</span>
+                        <span class="skill-tag accent">AMD Zen Arch</span>
+                        <span class="skill-tag accent">OOPS</span>
+                        <span class="skill-tag accent">OS Concepts</span>
+                        <span class="skill-tag accent">JSON Formatting</span>
+                        <span class="skill-tag accent">BFS / Greedy</span>
+                        <span class="skill-tag accent">EMG Sensors</span>
+                        <span class="skill-tag accent">IoT Systems</span>
+                        <span class="skill-tag accent">Spatial Logic</span>
+                        <span class="skill-tag accent">Technical Docs</span>
+                        <span class="skill-tag accent">Suffix Arrays</span>
+                        <span class="skill-tag accent">Bloom Filter</span>
+                        <!-- Duplicate -->
+                        <span class="skill-tag accent">CPU Architecture</span>
+                        <span class="skill-tag accent">AMD Zen Arch</span>
+                        <span class="skill-tag accent">OOPS</span>
+                        <span class="skill-tag accent">OS Concepts</span>
+                        <span class="skill-tag accent">JSON Formatting</span>
+                        <span class="skill-tag accent">BFS / Greedy</span>
+                        <span class="skill-tag accent">EMG Sensors</span>
+                        <span class="skill-tag accent">IoT Systems</span>
+                        <span class="skill-tag accent">Spatial Logic</span>
+                        <span class="skill-tag accent">Technical Docs</span>
+                        <span class="skill-tag accent">Suffix Arrays</span>
+                        <span class="skill-tag accent">Bloom Filter</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- ══════════════════ PROJECTS ══════════════════ -->
         <section id="projects" class="projects section-padding">
             <div class="container">
-                <h2 class="section-title">02. Selected <span class="accent-text">Works</span></h2>
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                </div>
                 <div class="project-grid">
-                    <!-- Project 1: Marv Strike -->
-                    <div class="project-card large">
-                        <div class="project-img-container">
-                            <img src="marv_strike_visual_1772112473670.png" alt="Marv Strike AI" class="project-img">
-                            <div class="circuit-overlay"></div>
-                            <span class="proj-tag">DAA</span>
+
+                    <!-- Project: Neural Tremor Suppression Sleeve -->
+                    <div class="project-card project-card--featured">
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">Biomedical · Hardware</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'Neural Tremor Suppression Sleeve'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'MPU6050'</span><span class="c-punct">,</span> <span class="c-string">'EMG Sensors'</span><span class="c-punct">,</span> <span class="c-string">'Embedded C'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Developer'</span><span class="c-punct">,</span>
+  <span class="c-prop">collaborators</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'G.Varshith'</span><span class="c-punct">,</span> <span class="c-string">'A.Manideep'</span><span class="c-punct">,</span> <span class="c-string">'K.Aditya'</span><span class="c-punct">],</span>
+<span class="c-punct">};</span></code></pre>
                         </div>
                         <div class="project-info">
-                            <h3>Marv Strike: AI Strategy Engine</h3>
-                            <p>An advanced turn-based strategy game featuring complex AI decision-making. Implemented
-                                <strong>recursive Divide & Conquer</strong> and <strong>Greedy algorithms</strong> for
-                                optimal move selection and combat logic.
-                            </p>
-                            <div class="tech-stack">
-                                <span>Python</span>
-                                <span>Algorithms</span>
-                                <span>Game Dev</span>
+                            <h3>Neural Tremor Suppression Sleeve <span class="badge-wip">Prototype</span></h3>
+                            <p>A wearable medical device designed for Parkinson's disease patients. It reads muscle tremor frequency in real-time using <strong>EMG sensors and MPU6050 (gyroscope/accelerometer)</strong>, then delivers precise counter-vibrations at the exact opposing frequency to suppress involuntary tremors — providing non-invasive symptom relief. The sleeve continuously adapts its vibration output to match the patient's tremor pattern, improving motor control and quality of life.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">MPU6050</span>
+                                <span class="tech-chip">EMG Sensors</span>
+                                <span class="tech-chip">Embedded C</span>
+                                <span class="tech-chip">Signal Processing</span>
                             </div>
-                            <a href="https://github.com/MANIDEEP2407-SYS" class="proj-link" target="_blank">View
-                                Repository →</a>
                         </div>
                     </div>
 
-                    <!-- Project 2: Knowledge Graph -->
+                    <!-- Project: FinalyTix – CA's Companion -->
                     <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1287&auto=format&fit=crop"
-                                alt="Knowledge Graph" class="project-img">
-                            <span class="proj-tag">DSA</span>
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">FinTech · Database · In Progress</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'FinalyTix'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'PostgreSQL'</span><span class="c-punct">,</span> <span class="c-string">'JavaScript'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Developer'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
+                        </div>
+                        <div class="project-info">
+                            <h3>FinalyTix — A CA's Companion <span class="badge-wip">In Progress</span></h3>
+                            <p>A comprehensive financial management database system built for Chartered Accountants. Uses <strong>PostgreSQL</strong> as the backbone to centralize and streamline client transaction records, tax filings, and audit trails. The system replaces spreadsheet chaos with a structured relational schema — enabling CAs to query history, generate reports, and track compliance across multiple clients from a single interface.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">PostgreSQL</span>
+                                <span class="tech-chip">JavaScript</span>
+                                <span class="tech-chip">SQL</span>
+                                <span class="tech-chip">Relational DB Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MANIDEEP2407-SYS" target="_blank" class="proj-link">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: IoT Water Filter -->
+                    <div class="project-card">
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">IoT · Environmental · In Progress</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'IoT Solar Water Filter'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'IoT Sensors'</span><span class="c-punct">,</span> <span class="c-string">'Arduino'</span><span class="c-punct">,</span> <span class="c-string">'Embedded C'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Developer'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
+                        </div>
+                        <div class="project-info">
+                            <h3>IoT-Based Solar Water Filter <span class="badge-wip">In Progress</span></h3>
+                            <p>An intelligent water purification system combining <strong>cotton-based filtration</strong> with solar energy. IoT sensors continuously monitor water quality (turbidity, pH, flow rate) and feed data into an algorithm that dynamically adjusts the filtration process — angling solar panels and managing filter layers — to <strong>maximize purification output</strong> based on current sunlight intensity and water contamination levels. Designed for off-grid, low-resource environments.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">IoT Sensors</span>
+                                <span class="tech-chip">Arduino</span>
+                                <span class="tech-chip">Embedded C</span>
+                                <span class="tech-chip">Solar Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: FinCal -->
+                    <div class="project-card">
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">FinTech · Web App</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'FinCal'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'Next.js 15'</span><span class="c-punct">,</span> <span class="c-string">'React'</span><span class="c-punct">,</span> <span class="c-string">'Node.js'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Full Stack Developer'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
+                        </div>
+                        <div class="project-info">
+                            <h3>FinCal — Goal-Based Investment Calculator</h3>
+                            <p>A full-stack financial education platform built for the HDFC Hackathon. Architected a <strong>"7-Depth Progressive Learning"</strong> interface that layers financial concepts — inflation, compounding, risk — progressively to avoid overwhelming beginners. Users advance through 7 distinct stages, each unlocking deeper financial insight. Built with Next.js 15 with zero-friction onboarding and a smooth UX designed for first-time investors.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">Next.js 15</span>
+                                <span class="tech-chip">React</span>
+                                <span class="tech-chip">Node.js</span>
+                                <span class="tech-chip">FinTech</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MANIDEEP2407-SYS/finacal-hackathon" target="_blank" class="proj-link">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: Dynamic Knowledge Graph -->
+                    <div class="project-card">
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">Data Structures · Backend</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'Knowledge Graph'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'Java 17'</span><span class="c-punct">,</span> <span class="c-string">'Maven'</span><span class="c-punct">,</span> <span class="c-string">'DSA'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Systems Architect'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
                         </div>
                         <div class="project-info">
                             <h3>Dynamic Knowledge Graph</h3>
-                            <p>Engineered a self-updating graph system using high-level data structures. Capable of
-                                answering complex queries dynamically.</p>
-                            <div class="tech-stack">
-                                <span>Java</span>
-                                <span>Graphs</span>
-                                <span>DSA</span>
+                            <p>A high-performance knowledge representation engine built in Java 17. Implements 5 advanced data structures — <strong>Suffix Array, Bloom Filter, Trie, B-Tree, and Suffix Tree</strong> — to enable fast entity extraction, deduplication, and temporal fact retrieval. Achieves O(log n) query time on complex relational datasets. Optimizes search and indexing for unstructured text, improving algorithmic design for AI-adjacent reasoning tasks.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">Java 17</span>
+                                <span class="tech-chip">Maven</span>
+                                <span class="tech-chip">Suffix Array</span>
+                                <span class="tech-chip">Bloom Filter</span>
                             </div>
-                            <a href="https://github.com/MANIDEEP2407-SYS" class="proj-link" target="_blank">View Source
-                                →</a>
+                            <div class="project-links">
+                                <a href="https://github.com/MANIDEEP2407-SYS/Knowledge-tree" target="_blank" class="proj-link">
+                                    <i class="fa-brands fa-github"></i> Source
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project 3: Healthcare Parkinson's -->
+                    <!-- Project: Card Strike AI -->
                     <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1480&auto=format&fit=crop"
-                                alt="Parkinson's Aid" class="project-img">
-                            <span class="proj-tag">MedTech</span>
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">AI · DAA · Game Dev</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'Marv Strike'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'Python'</span><span class="c-punct">,</span> <span class="c-string">'BFS'</span><span class="c-punct">,</span> <span class="c-string">'Greedy'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Lead Developer'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
                         </div>
                         <div class="project-info">
-                            <h3>Tremor detection</h3>
-                            <p>Integrates <strong>EMG sensors</strong> and <strong>Servomotors</strong> to provide
-                                real-time neuromuscular assistance for patients.</p>
-                            <div class="tech-stack">
-                                <span>Embedded</span>
-                                <span>Sensors</span>
-                                <span>Java</span>
+                            <h3>Marv Strike: Elemental Card Battle</h3>
+                            <p>An algorithm-driven card battle game with a custom AI engine. Built a hybrid <strong>Divide &amp; Conquer / Greedy strategy engine</strong> for real-time CPU decision-making — the AI evaluates elemental matchups on a grid using BFS pathfinding, then selects moves using greedy optimization. The result is a CPU opponent that responds with zero-latency, tactically sound moves across complex game states. Led the full development as Lead &amp; Developer.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">Python</span>
+                                <span class="tech-chip">BFS</span>
+                                <span class="tech-chip">D&amp;C</span>
+                                <span class="tech-chip">Greedy Algorithm</span>
                             </div>
-                            <a href="https://github.com/MANIDEEP2407-SYS" class="proj-link" target="_blank">View Project
-                                →</a>
+                            <div class="project-links">
+                                <a href="https://github.com/MANIDEEP2407-SYS/marve-strike" target="_blank" class="proj-link">
+                                    <i class="fa-brands fa-github"></i> Project
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project 4: CA Architecture -->
+                    <!-- Project: Geocoded Addressing (in progress) -->
                     <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="ca_architecture_visual_1772112495455.png" alt="CA Architecture"
-                                class="project-img">
-                            <span class="proj-tag">Systems</span>
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">Spatial Systems · In Progress</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'Unique Digital Address System'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'GPS'</span><span class="c-punct">,</span> <span class="c-string">'Mapping APIs'</span><span class="c-punct">],</span>
+  <span class="c-prop">status</span><span class="c-punct">:</span> <span class="c-string">'Research Phase (40%)'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
                         </div>
                         <div class="project-info">
-                            <h3>CA Architecture Optimizer</h3>
-                            <p>Computer Architecture project focused on system performance. Leveraged
-                                <strong>PostgreSQL</strong> for managing architectural simulation data.
-                            </p>
-                            <div class="tech-stack">
-                                <span>PostgreSQL</span>
-                                <span>Arch</span>
-                                <span>SQL</span>
+                            <h3>Unique Digital Address System <span class="badge-wip">In Progress</span></h3>
+                            <p>A next-generation geocoded addressing framework that generates <strong>short, human-readable address codes from GPS coordinates</strong> — solving the "last-mile" navigation problem in rural and unaddressed areas. The system encodes latitude/longitude into compact alphanumeric codes that can be decoded back to precise geographic locations, enabling accurate navigation without traditional street addresses. Collaborating with Samyuktha, Joshika, and M Rishit.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">GPS Encoding</span>
+                                <span class="tech-chip">Mapping APIs</span>
+                                <span class="tech-chip">Spatial Data</span>
                             </div>
-                            <a href="https://github.com/MANIDEEP2407-SYS" class="proj-link" target="_blank">View
-                                Analysis →</a>
+                            <div class="progress-bar-container">
+                                <div class="progress-label">
+                                    <span>Research Phase — Spec Complete</span><span>40%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width:0%" data-progress="40"></div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MANIDEEP2407-SYS" target="_blank" class="proj-link">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project: NutriExplorer -->
+                    <div class="project-card">
+                        <div class="project-code-header">
+                            <div class="dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="proj-tag-label">HealthTech · Web</span>
+                        </div>
+                        <div class="project-code-body">
+<pre><code><span class="c-keyword">const</span> <span class="c-var">project</span> <span class="c-op">=</span> <span class="c-punct">{</span>
+  <span class="c-prop">name</span><span class="c-punct">:</span> <span class="c-string">'NutriExplorer'</span><span class="c-punct">,</span>
+  <span class="c-prop">tools</span><span class="c-punct">:</span> <span class="c-punct">[</span><span class="c-string">'JavaScript'</span><span class="c-punct">,</span> <span class="c-string">'CSS'</span><span class="c-punct">,</span> <span class="c-string">'HTML'</span><span class="c-punct">],</span>
+  <span class="c-prop">role</span><span class="c-punct">:</span> <span class="c-string">'Frontend Developer'</span><span class="c-punct">,</span>
+<span class="c-punct">};</span></code></pre>
+                        </div>
+                        <div class="project-info">
+                            <h3>NutriExplorer</h3>
+                            <p>An interactive educational web application that bridges the gap between dietary science and everyday food choices. NutriExplorer translates raw nutritional database entries into <strong>actionable dietary insights</strong> — mapping macro/micronutrient requirements to real food products, helping users understand exactly what they're eating and why it matters. Built with vanilla JavaScript for fast, lightweight performance.</p>
+                            <div class="project-tech-row">
+                                <span class="tech-chip">JavaScript</span>
+                                <span class="tech-chip">HTML / CSS</span>
+                                <span class="tech-chip">Nutrition API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MANIDEEP2407-SYS/NutriExplorer" target="_blank" class="proj-link">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills section-padding">
+        <!-- ══════════════════ RESEARCH ══════════════════ -->
+        <section id="research" class="research section-padding">
             <div class="container">
-                <h2 class="section-title">03. Technical <span class="accent-text">Arsenal</span></h2>
-                <div class="skills-wrapper">
-                    <div class="skill-category">
-                        <h3>Hardware & Systems</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">CPU Architecture</div>
-                            <div class="skill-item">AMD Zen Arch</div>
-                            <div class="skill-item">Motherboard Design Patterns</div>
-                            <div class="skill-item">Open Source Systems</div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Software & Logic</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">C / C++</div>
-                            <div class="skill-item">Java</div>
-                            <div class="skill-item">Python</div>
-                            <div class="skill-item">MATLAB</div>
-                            <div class="skill-item">JavaScript</div>
-                            <div class="skill-item">Electron JS</div>
-                            <div class="skill-item">OOPS</div>
-                            <div class="skill-item">MySQL / PostgreSQL</div>
-                            <div class="skill-item">DSA</div>
-                            <div class="skill-item">Git / GitHub</div>
-                            <div class="skill-item">LaTeX & Overleaf</div>
-                            <div class="skill-item">OS Concepts</div>
-                            <div class="skill-item">JSON / Data Formatting</div>
-                            <div class="skill-item">HTML / CSS</div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Innovation & Impact</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">Innovation Ambassador</div>
-                            <div class="skill-item">NSS Volunteer</div>
+                <div class="section-header">
+                    <h2 class="section-title">Research &amp; <span class="text-gradient">Publications</span></h2>
+                </div>
+                <div class="research-grid">
 
+                    <!-- Paper 1: Water Salinity -->
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fa-solid fa-flask-vial"></i>
+                        </div>
+                        <div class="research-content">
+                            <div class="research-meta">
+                                <span class="research-year">2025</span>
+                                <span class="research-field">Environmental Science · Field Research</span>
+                            </div>
+                            <h3>Water Salinity and its Impact in Kalpar Village</h3>
+                            <p class="research-subtitle">A Participatory Rural Appraisal Approach</p>
+                            <p class="research-desc">An on-ground field research study conducted in Kalpar Village examining the relationship between water salinity levels and their socioeconomic and agricultural impacts on the local community. Used a <strong>Participatory Rural Appraisal (PRA)</strong> methodology — directly engaging villagers to document their lived experience with saline water, its effects on crops, health, and livelihoods. Provides data-driven insights and community-led recommendations for water quality intervention.</p>
+                            <div class="research-actions">
+                                <a href="2025_10_26-Water Salinity and its Imapct in Kalpar Village--A Participatory Rural Appraisal Approach.pdf"
+                                   target="_blank" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-file-pdf"></i> View Paper
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Soft Competencies</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">Structured Debating</div>
-                            <div class="skill-item">Technical Documentation</div>
-                            <div class="skill-item">Analytical Problem Solving</div>
-                            <div class="skill-item">Rapid Iteration</div>
+
+                </div>
+
+                <!-- Innovation Ambassador Certificate -->
+                <div class="cert-banner">
+                    <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="cert-info">
+                        <h3>Innovation Ambassador — Online Training</h3>
+                        <p>Certified Innovation Ambassador, trained to bridge student innovation with industry and institutional frameworks.</p>
+                    </div>
+                    <a href="IA Online Training Certificate.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════════════ BEYOND THE CODE ══════════════════ -->
+        <section id="beyond" class="beyond section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Beyond the <span class="text-gradient">Code</span></h2>
+                </div>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fa-solid fa-film"></i></div>
+                        <h3>Anime &amp; Stories</h3>
+                        <p>I find immense inspiration in the complex narratives and visual artistry of anime. It teaches me about world-building and the importance of a strong "core logic" in any system.</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <h3>The Library</h3>
+                        <div class="reading-list">
+                            <span>→ "The Design of Everyday Things"</span>
+                            <span>→ "The Pragmatic Programmer"</span>
+                            <span>→ Science Fiction Anthologies</span>
                         </div>
+                        <p>Reading is my way of exploring different dimensions of thought — from technical deep-dives to philosophical fiction.</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Hardware Nerd</h3>
+                        <p>Deep fascination with CPU architecture, AMD Zen designs, and motherboard engineering. I love understanding the silicon that powers everything I write.</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Social &amp; Environmental Impact</h3>
+                        <p>Passionate about applying technology to real community challenges — from water quality research in rural villages to building tools that bridge the digital divide.</p>
                     </div>
                 </div>
             </div>
-            <!-- Inspiration Section -->
-            <section id="inspiration" class="section-padding">
-                <div class="container">
-                    <h2 class="section-title">04. Beyond the <span class="accent-text">Code</span></h2>
-                    <div class="interests-grid">
-                        <div class="interest-card">
-                            <img src="anime_reading_visual_1772111784897.png" alt="Anime & Reading"
-                                style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
-                            <h3>Anime & Stories</h3>
-                            <p>I find immense inspiration in the complex narratives and visual artistry of anime. It
-                                teaches me about world-building and the importance of a strong "core logic" in any
-                                system. Some of my favorites involve intricate strategizing and futuristic concepts.</p>
-                        </div>
-                        <div class="interest-card">
-                            <div style="padding: 20px 0;">
-                                <h3
-                                    style="font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: var(--accent);">
-                                    CURRENT_READING.log</h3>
-                                <ul style="list-style: none; margin-top: 20px; color: var(--text-secondary);">
-                                    <li style="margin-bottom: 10px;">→ "The Design of Everyday Things"</li>
-                                    <li style="margin-bottom: 10px;">→ "The Pragmatic Programmer"</li>
-                                    <li style="margin-bottom: 10px;">→ Science Fiction Anthologies</li>
-                                </ul>
-                            </div>
-                            <h3>The Library</h3>
-                            <p>Reading is my way of exploring different dimensions of thought. From technical deep-dives
-                                to philosophical fiction, books are the blueprints I use to expand my mental
-                                architecture.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+        </section>
     </main>
 
+    <!-- ══════════════════ CONTACT / FOOTER ══════════════════ -->
     <footer id="contact" class="section-padding">
         <div class="container">
-            <div class="terminal-footer">
-                <div class="termin-header">
-                    <div class="dots"><span></span><span></span><span></span></div>
-                    <div class="title-bar">System_Contact.exe</div>
-                    <div class="system-time">01:23:50 UTC</div>
+            <div class="contact-header">
+                <h2 class="section-title">Contact <span class="text-gradient">With Me</span></h2>
+                <p class="contact-sub">If you have any questions or opportunities, please don't hesitate to reach out. I am open to work that aligns with my skills and interests.</p>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:manideepreddyakula@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>manideepreddyakula@gmail.com</span>
+                </a>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Coimbatore, Tamil Nadu, India</span>
                 </div>
-                <div class="terminal-body">
-                    <div class="footer-main">
-                        <h2 class="cta-title">Ready to <span class="text-gradient">initialize</span> the next system?
-                        </h2>
-                        <p>Currently accepting inquiries for strategic partnerships, technical architecture roles, and
-                            innovative collaborations.</p>
-                        <div class="footer-actions">
-                            <a href="mailto:manideepreddyakula@gmail.com" class="btn btn-primary pulse">Send Signal
-                                [Email]</a>
-                            <div class="status-indicator">
-                                <span class="status-dot"></span>
-                                <span>STATUS: READY_FOR_INPUT</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-sidebar">
-                        <div class="link-group">
-                            <span class="label">SOCIAL_IO</span>
-                            <div class="links">
-                                <a href="#" class="io-link"><span class="io-code">01</span> LinkedIn</a>
-                                <a href="https://github.com/MANIDEEP2407-SYS" class="io-link" target="_blank"><span
-                                        class="io-code">02</span> GitHub</a>
-                                <a href="#" class="io-link"><span class="io-code">03</span> ResearchGate</a>
-                            </div>
-                        </div>
-                        <div class="link-group">
-                            <span class="label">LOCATION</span>
-                            <p class="io-text">Coimbatore, Tamil Nadu, India</p>
-                            <p class="io-coords">11.0168° N, 76.9558° E</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="terminal-footer-bottom">
-                    <p class="copyright">&copy; 2024 Innovation Architect. Optimized for precision.</p>
-                    <div class="build-version">Ver 2.0.4-stable</div>
+            </div>
+            <div class="footer-actions">
+                <a href="mailto:manideepreddyakula@gmail.com" class="btn btn-primary pulse">
+                    <i class="fa-solid fa-paper-plane"></i> Contact Me
+                </a>
+                <a href="resume.pdf" class="btn btn-secondary" target="_blank">
+                    <i class="fa-solid fa-file-pdf"></i> Resume
+                </a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/MANIDEEP2407-SYS" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/manideep-reddy-akula-148b453b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:manideepreddyakula@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="footer-year"></span> Akula Manideep. All rights reserved.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span>OPEN TO OPPORTUNITIES</span>
                 </div>
             </div>
         </div>
     </footer>
+
+    <a href="#home" class="scroll-to-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
